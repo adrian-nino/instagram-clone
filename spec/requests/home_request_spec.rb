@@ -21,7 +21,7 @@ RSpec.describe "Home", type: :request do
         get root_path
         
         #what do we expect should happen if you are not signed in
-        skip("Request Test: you need to implement this as HW")
+        expect(response).to redirect_to(new_user_session_path)
       end
     end
 end
