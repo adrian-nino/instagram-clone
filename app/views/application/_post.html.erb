@@ -15,6 +15,7 @@
                 </li>   
             <% end %>
             <!-- PENDING create a link to star the post --!>
+            <%= link_to "Stars #{post.stars}", star_path(post.user_id, post.id), method: :post, class: "nav-link", id: "post-#{post.id}-user-#{post.user.id}" %>
         </ul>
       </div>
       <div class="card-body">

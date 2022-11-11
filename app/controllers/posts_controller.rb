@@ -55,6 +55,11 @@ class PostsController < ApplicationController
 
   # POST users/1/posts/1/star
   # PENDING CONTROLLER ACTION
+  def star
+    @post.stars += 1
+    @post.save
+    redirect_to root_path
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
