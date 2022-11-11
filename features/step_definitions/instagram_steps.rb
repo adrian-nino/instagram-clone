@@ -120,8 +120,9 @@ end
 
 When("I click Stars in Mary's first post") do
     @post = @mary.posts.first
-    # PENDING find the link to the post 
-    pending
+    find("#post-#{@post.id}-user-#{@mary.id}").click
+    #find("#post-#{@post.id}-#user-#{@mary.id}").click 
+    #find("post-#(@post.id)-user-#(@mary.id)").click
 end
 
 Then('I should have starred the post') do
